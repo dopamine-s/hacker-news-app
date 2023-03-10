@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import RootLayout from './components/RootLayout/RootLayout';
+import FreshNewsPage from './Pages/FreshNewsPage/FreshNewsPage';
+import SingleNewsDetailsPage from './Pages/SingleNewsDetailsPage/SingleNewsDetailsPage';
+import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
 
-function App() {
+const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <RootLayout>
+        <Routes>
+          <Route path="/" element={<FreshNewsPage />} />
+          <Route path="/news" element={<FreshNewsPage />} />
+          <Route path="/news/:id" element={<SingleNewsDetailsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </RootLayout>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

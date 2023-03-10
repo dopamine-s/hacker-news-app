@@ -1,0 +1,28 @@
+@import '../../styles/mediaVariables.scss';
+
+.news {
+  display: grid;
+  margin: 0 auto;
+  padding: 0.5rem;
+
+  & h3 {
+    margin-left: 0.8rem;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    width: 90%;
+    padding: 1rem;
+
+    & h3 {
+      margin-left: 1rem;
+    }
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    width: 80%;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    width: 60%;
+  }
+}
