@@ -23,7 +23,10 @@ const Theme: FC = () => {
       onClick={handleChange}
       aria-label="Theme switcher"
     >
-      {theme === 'dark' ? '★ To Light theme' : '★ To Dark theme'}
+      <p className={classes.text}>
+        <span className={classes.text}>Switch theme</span>
+        <span className={classes.icon}>☀</span>
+      </p>
     </div>
   );
 };
