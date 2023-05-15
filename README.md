@@ -1,6 +1,7 @@
 <h1 align="center">Welcome to «Hacker News» app👋</h1>
+<h2 align="center">Now with the Dark theme!</h2>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.2.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
 > Frontend Assessment «Test for Middle Frontend React Developer» with React and TypeScript.
@@ -42,3 +43,9 @@ npm start
 > - React
 > - React Router V6
 > - TypeScript
+
+### UPDATED!
+
+The Dark theme is now available!
+
+> - Dark theme is fully implemented (with Redux).

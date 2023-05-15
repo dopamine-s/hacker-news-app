@@ -19,3 +19,13 @@ export function getDomainFromLink(link: string): string {
     return 'Source is unknown';
   }
 }
+
+export const getTheme = (): 'light' | 'dark' => {
+  const theme = `${window?.localStorage?.getItem('theme')}`;
+  if (['light', 'dark'].includes(theme)) return theme as 'light' | 'dark';
+
+  const userMedia = window.matchMedia('(prefers-color-scheme: light)');
+  if (userMedia.matches) return 'light';
+
+  return 'light';
+};
