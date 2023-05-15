@@ -6,10 +6,10 @@ import Theme from '../Theme';
 const Header: FC = () => {
   return (
     <header className={classes.header}>
+      <Theme />
       <h1>
         <Link to="/">Hacker News</Link>
       </h1>
-      <Theme />
     </header>
   );
 };
