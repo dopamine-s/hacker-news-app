@@ -25,7 +25,7 @@ const Theme: FC = () => {
     >
       <p className={classes.text}>
         <span className={classes.text}>Switch theme</span>
-        <span className={classes.icon}>☀</span>
+        <span className={classes.icon}>{theme === 'dark' ? '🌞' : '🌚'}</span>
       </p>
     </div>
   );
