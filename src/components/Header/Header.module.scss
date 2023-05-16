@@ -6,7 +6,8 @@
   margin-top: 2rem;
 
   & h1 {
-    justify-self: center;
+    display: flex;
+    margin-left: calc(3.7vw);
   }
 
   & a {
@@ -21,7 +22,17 @@
     }
   }
 
+  @media (max-width: $breakpoint-sm) {
+    & h1 span {
+      display: block;
+    }
+  }
+
   @media (min-width: $breakpoint-md) {
+    & h1 {
+      margin-left: calc(10.5vw);
+    }
+
     & a {
       font-size: 2.8rem;
     }
@@ -30,8 +41,24 @@
   @media (min-width: $breakpoint-lg) {
     margin-bottom: 2rem;
 
+    & h1 {
+      margin-left: calc(15vw);
+    }
+
     & a {
       font-size: 3rem;
+    }
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    & h1 {
+      margin-left: calc(23.5vw);
+    }
+  }
+
+  @media (min-width: $breakpoint-xxl) {
+    & h1 {
+      margin-left: calc(23.3vw);
     }
   }
 }
