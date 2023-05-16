@@ -8,7 +8,9 @@ const Header: FC = () => {
     <header className={classes.header}>
       <Theme />
       <h1>
-        <Link to="/">Hacker News</Link>
+        <Link to="/">
+          Hacker <span>News</span>
+        </Link>
       </h1>
     </header>
   );

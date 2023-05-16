@@ -53,7 +53,9 @@ const FreshNewsPage: FC = () => {
   return (
     <section className={classes['news-list']}>
       <h2>List of News</h2>
-      <Button onClick={handleRefreshClick}>Refresh</Button>
+      <Button className={classes.button} onClick={handleRefreshClick}>
+        Refresh
+      </Button>
       {loading && <LoadingSpinner />}
       {!loading && error && <p className={classes.error}>{error}</p>}
       {!loading && !error && news.length > 0 && <NewsList news={news} />}

@@ -71,7 +71,9 @@ const SingleNewsDetailsPage: FC = () => {
         score={singleNews.score}
         by={singleNews.by}
       />
-      <Button onClick={fetchSingleNews}>Refresh comments</Button>
+      <Button onClick={fetchSingleNews} className={classes['comments-button']}>
+        Refresh <span>comments</span>
+      </Button>
       {loading && <LoadingSpinner />}
       {!loading && error && <p className={classes.error}>{error}</p>}
       {!loading && !error && <CommentsLayout singleNews={singleNews} />}

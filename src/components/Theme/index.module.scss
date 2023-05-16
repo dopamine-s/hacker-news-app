@@ -2,8 +2,8 @@
 
 .switch {
   position: absolute;
-  top: 0;
-  right: 0.5rem;
+  top: 3.4rem;
+  right: calc(3.7vw);
   cursor: pointer;
   padding: 0.5rem;
   text-align: center;
@@ -15,9 +15,20 @@
   }
 
   @media (min-width: $breakpoint-md) {
-    position: fixed;
-    top: 1rem;
-    right: 2rem;
+    top: 3.8rem;
+    right: calc(10.5vw);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    right: calc(15vw);
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    right: calc(23.5vw);
+  }
+
+  @media (min-width: $breakpoint-xxl) {
+    right: calc(23.3vw);
   }
 }
 
@@ -29,7 +40,7 @@
   margin-top: 0.9rem;
   display: none;
 
-  @media (min-width: $breakpoint-xl) {
+  @media (min-width: $breakpoint-lg) {
     display: block;
   }
 }
