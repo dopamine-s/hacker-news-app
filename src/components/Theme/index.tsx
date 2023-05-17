@@ -2,6 +2,7 @@ import { useEffect, FC } from 'react';
 import { useAppSelector } from '../../hooks/use-app-selector';
 import { useAppDispatch } from '../../hooks/use-app-dispatch';
 import { RootState } from '../../types/state';
+import { Brightness4, Brightness7 } from '@mui/icons-material';
 
 import { set } from '../../store/theme-slice';
 import classes from './index.module.scss';
@@ -25,7 +26,9 @@ const Theme: FC = () => {
     >
       <p className={classes.text}>
         <span className={classes.text}>Switch theme</span>
-        <span className={classes.icon}>{theme === 'dark' ? '🌞' : '🌚'}</span>
+        <span className={classes.icon}>
+          {theme === 'dark' ? <Brightness7 /> : <Brightness4 />}
+        </span>
       </p>
     </div>
   );
