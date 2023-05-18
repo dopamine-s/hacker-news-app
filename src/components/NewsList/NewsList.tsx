@@ -11,7 +11,6 @@ interface NewsListProps {
 const NewsList: FC<NewsListProps> = ({ news }) => {
   return (
     <div className={classes.news}>
-      <h3>Latest:</h3>
       <ul>
         {news.map((singleNews) => (
           <SingleNews
