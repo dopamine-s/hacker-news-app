@@ -8,6 +8,7 @@ import LoadingSpinner from '../../UI/Spinner/LoadingSpinner';
 import classes from './SingleNewsDetailsPage.module.scss';
 import { SingleNewsInterface } from '../../types/singleNews';
 import axios from 'axios';
+import { Refresh, ArrowBack } from '@mui/icons-material';
 
 const SingleNewsDetailsPage: FC = () => {
   const { id } = useParams();
@@ -57,12 +58,16 @@ const SingleNewsDetailsPage: FC = () => {
 
   return (
     <section className={classes['single-news']}>
-      <h2>Single News</h2>
+      <h2 className={classes['visually-hidden']}>Single News</h2>
       <Button
         onClick={navigateToMainHandler}
         className={classes['navigate-button']}
       >
-        Back to fresh news
+        <ArrowBack
+          className={classes['back-icon']}
+          sx={{ fontSize: '1.4rem' }}
+        />
+        <span>Back to the </span>latest news
       </Button>
       <SingleNewsDetails
         url={singleNews.url}
@@ -72,7 +77,11 @@ const SingleNewsDetailsPage: FC = () => {
         by={singleNews.by}
       />
       <Button onClick={fetchSingleNews} className={classes['comments-button']}>
-        Refresh <span>comments</span>
+        <span>Refresh comments </span>
+        <Refresh
+          className={classes['refresh-icon']}
+          sx={{ fontSize: '1.3rem' }}
+        />
       </Button>
       {loading && <LoadingSpinner />}
       {!loading && error && <p className={classes.error}>{error}</p>}

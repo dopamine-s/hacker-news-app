@@ -6,7 +6,7 @@ const NotFoundPage: FC = () => {
   return (
     <section className={classes['not-found']}>
       <h2>404 Not found</h2>
-      <Link to="/">Back to fresh news</Link>
+      <Link to="/">Back to latest news</Link>
     </section>
   );
 };

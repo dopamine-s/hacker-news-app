@@ -27,7 +27,11 @@ const Theme: FC = () => {
       <p className={classes.text}>
         <span className={classes.text}>Switch theme</span>
         <span className={classes.icon}>
-          {theme === 'dark' ? <Brightness7 /> : <Brightness4 />}
+          {theme === 'dark' ? (
+            <Brightness7 sx={{ fontSize: '1.6rem' }} />
+          ) : (
+            <Brightness4 sx={{ fontSize: '1.6rem' }} />
+          )}
         </span>
       </p>
     </div>

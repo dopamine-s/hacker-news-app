@@ -5,6 +5,7 @@ import Button from '../../UI/Button/Button';
 import LoadingSpinner from '../../UI/Spinner/LoadingSpinner';
 import classes from './FreshNewsPage.module.scss';
 import { NumberedSingleNewsInterface } from '../../types/singleNews';
+import { Refresh } from '@mui/icons-material';
 
 const FreshNewsPage: FC = () => {
   const [news, setNews] = useState<NumberedSingleNewsInterface[]>([]);
@@ -53,8 +54,13 @@ const FreshNewsPage: FC = () => {
   return (
     <section className={classes['news-list']}>
       <h2>List of News</h2>
+      <p className={classes.latest}>Latest:</p>
       <Button className={classes.button} onClick={handleRefreshClick}>
         Refresh
+        <Refresh
+          className={classes['refresh-icon']}
+          sx={{ fontSize: '1.3rem' }}
+        />
       </Button>
       {loading && <LoadingSpinner />}
       {!loading && error && <p className={classes.error}>{error}</p>}
