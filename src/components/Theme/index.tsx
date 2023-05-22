@@ -22,7 +22,9 @@ const Theme: FC = () => {
     <div
       className={classes.switch}
       onClick={handleChange}
-      aria-label="Theme switcher"
+      aria-label={
+        theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'
+      }
     >
       <p className={classes.text}>
         <span className={classes.text}>Switch theme</span>
