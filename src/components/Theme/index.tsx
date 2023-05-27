@@ -1,4 +1,4 @@
-import { useEffect, FC } from 'react';
+import { useEffect, FC, KeyboardEvent } from 'react';
 import { useAppSelector } from '../../hooks/use-app-selector';
 import { useAppDispatch } from '../../hooks/use-app-dispatch';
 import { RootState } from '../../types/state';
@@ -18,13 +18,21 @@ const Theme: FC = () => {
 
   const handleChange = () => dispatch(set(theme === 'dark' ? 'light' : 'dark'));
 
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>): void => {
+    if (event.key === 'Enter') {
+      handleChange();
+    }
+  };
+
   return (
     <div
       className={classes.switch}
       onClick={handleChange}
+      onKeyDown={handleKeyDown}
       aria-label={
         theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'
       }
+      tabIndex={0}
     >
       <p className={classes.text}>
         <span className={classes.text}>Switch theme</span>
