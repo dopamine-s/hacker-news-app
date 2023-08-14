@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      interval: 'weekly'
+      interval: 'monthly'
     # Allow up to 10 open pull requests for pip dependencies
     open-pull-requests-limit: 10
     ignore:
